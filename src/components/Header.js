@@ -8,7 +8,7 @@ const Header = (props) => {
   return (
     <header className="viewContainer">
       <div className="headerItem">
-        <Link to="/">
+        <Link to="/home">
           <img src={Logo} alt="img" />
         </Link>
       </div>
