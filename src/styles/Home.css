@@ -1,0 +1,24 @@
+.stickyContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.stickyItem {
+    width: 300px;
+    padding: 20px;
+}
+.stickyItem img {
+    width: 300px;
+    height: 300px;
+}
+.stickyContainer::after {
+    content: "";
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+}
+@media (width <= 710px) {
+    .stickyContainer{
+        justify-content: space-around;
+    }
+}

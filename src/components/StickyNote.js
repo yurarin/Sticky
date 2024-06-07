@@ -1,8 +1,13 @@
 import React from "react";
+import "../styles/StickyNote.css";
 
-const StickyNote = () => {
+const StickyNote = (props) => {
     return (
-        <h1>StickyNoteです</h1>
+        <div className="sticky">
+            <div className="inStickyItem">
+                <p>{ props.text }</p>
+            </div>
+        </div>
     )
 };
 

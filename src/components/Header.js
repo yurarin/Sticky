@@ -4,9 +4,7 @@ import { Logo } from "../assets/index";
 import { Link } from "react-router-dom";
 
 
-const Header = () => {
-  const version = "0.1.0";
-
+const Header = (props) => {
   return (
     <header className="viewContainer">
       <div className="headerItem">
@@ -15,7 +13,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="headerItem">
-        <p>Ver {version}</p>
+        <p>Ver {props.version}</p>
       </div>
     </header>
   );
