@@ -1,8 +1,16 @@
 import React from "react";
+import "../styles/Header.css"
 
 const Header = () => {
     return (
-        <h1>Headerです</h1>
+        <header>
+            <div className="headerItem">
+                <h3>Header</h3>
+            </div>
+            <div className="headerItem">
+                <p>text</p>
+            </div>
+        </header>
     )
 };
 

@@ -1,0 +1,12 @@
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 5px;
+    background: #9797975e;
+    align-items: center;
+}
+.headerItem {
+    padding: 5px;
+    background: #575757;
+}
