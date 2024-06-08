@@ -8,7 +8,7 @@ const Home= () => {
     return (
         <div className="stickyContainer">
             <div className="stickyItem">
-                <Link to="/create">
+                <Link to="/add">
                     <img src={Add} alt="img" />
                 </Link>
             </div>

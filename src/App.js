@@ -1,6 +1,6 @@
 import { Header } from "./components/index";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Hello, Home } from "./elementIndex";
+import { Hello, Home, Add } from "./elementIndex";
 
 function App() {
   const login = true;
@@ -13,7 +13,7 @@ function App() {
           <Route path="/home" element={login ? <Home /> : <Navigate to="/hello" />} />
           <Route path="/hello" element={login ? <Navigate to="/home" /> : <Hello />} />
           <Route path="/login" element={<h1>loginです</h1>} />
-          <Route path="/create" element={<h1>createです。</h1>} />
+          <Route path="/add" element={ <Add /> } />
         </Routes>
       </div>
     </div>

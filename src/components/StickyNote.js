@@ -4,9 +4,7 @@ import "../styles/StickyNote.css";
 const StickyNote = (props) => {
     return (
         <div className="sticky">
-            <div className="inStickyItem">
-                <p>{ props.text }</p>
-            </div>
+            <p>{props.text}</p>
         </div>
     )
 };

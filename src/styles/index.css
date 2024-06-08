@@ -9,6 +9,10 @@ body {
   color: #37311f;
 }
 
+* :focus {
+  outline: none;
+}
+
 /* viewContainer System */
 .viewContainer {
   padding-right: 15px;
