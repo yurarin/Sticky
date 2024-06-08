@@ -1,0 +1,92 @@
+.add {
+    margin: 10px;
+}
+.addContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.addItem {
+    width: 550px;
+    height: 550px;
+}
+.addStickyPreview {
+    width: 100%;
+    height: 100%;
+    background: #f2be3a;
+    border-radius: 0 0 10px 0;
+    box-shadow: #8a8a8ab9 0px 1px 2px 0.3px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    /* 改行を表現できる */
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    /* 一列で書ける文字数を超えたら改行 */
+    word-break: break-all;
+}
+.addTextarea {
+    width: 100%;
+    height: 150px;
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    border: none;
+    border: solid 1px #e4e4e4;
+    border-radius: 10px;
+    letter-spacing: 3.2px;
+}
+.addStickyPreview h2 {
+    font-size: 35px;
+}
+@media (width <= 600px) {
+    .addItem {
+        width: 450px;
+        height: 450px;
+    }
+}
+@media (width <= 500px) {
+    .addItem {
+        width: 350px;
+        height: 350px;
+    }
+    .addStickyPreview h2 {
+        font-size: 30px;
+    }
+}
+@media (width <= 400px) {
+    .addItem {
+        width: 250px;
+        height: 250px;
+    }
+    .addStickyPreview h2 {
+        font-size: 20px;
+    }
+}
+@media (width <= 300px) {
+    .addItem {
+        width: 150px;
+        height: 150px;
+    }
+    .addStickyPreview h2 {
+        font-size: 12px;
+    }
+}
+.addBtn {
+    width: 100%;
+    height: 40px;
+    border: none;
+    font-weight: bold;
+    background: #f2be3a;
+    color: #37311f;
+    letter-spacing: 5px;
+    border-radius: 10px;
+}
+.addBtn:active {
+    background: #d9aa34;
+    color: #907e4f;
+    transition: 0.1s;
+}

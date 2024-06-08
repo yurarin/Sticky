@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.headerItem {
+    padding: 5px;
+}
+.headerItem img {
+    width: 80px;
+}
