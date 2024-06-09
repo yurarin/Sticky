@@ -1,8 +1,26 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./styles/Add.css";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "./firebaseConfig";
+import { useNavigate } from "react-router-dom";
 
-const Add = () => {
+const Add = (props) => {
     const [stickyText, setStickyText] = useState("");
+    const textareaRef = useRef(null);
+    let btnCount = true;
+    const navigate = useNavigate();
+
+    const addFunction = async () => {
+        await addDoc(collection(db, props.user.displayName), {
+            sticky: stickyText
+        });
+        textareaRef.current.value = "";
+        setStickyText("");
+        navigate("/home");
+    }
+    if (stickyText.length > 0) {
+        btnCount = false;
+    }
 
     return (
         <div className="add">
@@ -24,9 +42,10 @@ const Add = () => {
                                     setStickyText(e.target.value);
                                 }
                             } 
+                            ref={textareaRef}
                         />
                         <p>{ stickyText.length } / 150</p>
-                        <button className="addBtn">新規作成</button>
+                        <button className="addBtn" onClick={addFunction} disabled={btnCount}>新規作成</button>
                     </div>
                 </div>
             </div>
