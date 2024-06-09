@@ -1,23 +1,44 @@
 import { Header } from "./components/index";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Hello, Home, Add } from "./elementIndex";
+import { Hello, Home, Add, Login } from "./elementIndex";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useEffect, useState } from "react";
 
 function App() {
-  const login = true;
+  const auth = getAuth();
+  const [isLoading, setIsLoading] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
+  const [user, setUser] = useState();
 
-  return (
-    <div className="App">
-      <Header version="0.1.0" />
-      <div className='viewContainer'>
-        <Routes>
-          <Route path="/home" element={login ? <Home /> : <Navigate to="/hello" />} />
-          <Route path="/hello" element={login ? <Navigate to="/home" /> : <Hello />} />
-          <Route path="/login" element={<h1>loginです</h1>} />
-          <Route path="/add" element={ <Add /> } />
-        </Routes>
+  const FirebaseAuth = () => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setIsLogin(true);
+        setUser(user);
+      }
+      setIsLoading(false);
+    });
+  }
+
+  useEffect(() => {
+    FirebaseAuth();
+  });
+
+  if (!isLoading) {
+    return (
+      <div className="App">
+        <Header version="0.1.0" />
+        <div className='viewContainer'>
+          <Routes>
+            <Route path="/home" element={isLogin ? <Home user={user} /> : <Navigate to="/hello" />} />
+            <Route path="/hello" element={isLogin ? <Navigate to="/home" /> : <Hello />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/add" element={<Add user={user} />} />
+          </Routes>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
