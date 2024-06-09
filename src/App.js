@@ -30,6 +30,7 @@ function App() {
         <Header version="0.1.0" />
         <div className='viewContainer'>
           <Routes>
+            <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={isLogin ? <Home user={user} /> : <Navigate to="/hello" />} />
             <Route path="/hello" element={isLogin ? <Navigate to="/home" /> : <Hello />} />
             <Route path="/login" element={<Login />} />
