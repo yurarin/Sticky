@@ -93,3 +93,7 @@
 .addBtn:disabled {
     background: #8a8a8a;
 }
+
+.itemBox {
+    padding-bottom: 100px;
+}
