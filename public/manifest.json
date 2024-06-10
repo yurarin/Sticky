@@ -1,6 +1,6 @@
 {
-  "short_name": "StickyNote",
-  "name": "StickyNote",
+  "short_name": "Sticky",
+  "name": "Sticky",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#F2BE3A",
   "background_color": "#ffffff"
 }
