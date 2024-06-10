@@ -4,13 +4,13 @@ import { GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAOcEp70YPqoK7IQvGw3C7Y24E3IXR5orE",
-    authDomain: "sticky-af215.firebaseapp.com",
-    projectId: "sticky-af215",
-    storageBucket: "sticky-af215.appspot.com",
-    messagingSenderId: "723924245435",
-    appId: "1:723924245435:web:76dd2be27dd31b465d029e",
-    measurementId: "G-JH2BV67MEH"
+    apiKey: "AIzaSyBBNQCrDqBiIrF6RBawUEXYOPtRIAy9TAo",
+    authDomain: "sticky-23836.firebaseapp.com",
+    projectId: "sticky-23836",
+    storageBucket: "sticky-23836.appspot.com",
+    messagingSenderId: "401846711506",
+    appId: "1:401846711506:web:888bb261d8f3ca102fe90b",
+    measurementId: "G-KJYFDYC1SH"
 };
 
 const app = initializeApp(firebaseConfig);
