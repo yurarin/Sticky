@@ -90,3 +90,6 @@
     color: #907e4f;
     transition: 0.1s;
 }
+.addBtn:disabled {
+    background: #8a8a8a;
+}
