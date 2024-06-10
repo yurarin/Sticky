@@ -30,7 +30,7 @@ const Home= (props) => {
     if (!isLoading) {
         
         const removeSticky = async (id) => {
-            if(window.confirm("stickyを剥がしますか？")){
+            if(window.confirm("Stickyを剥がしますか？")){
                 await deleteDoc(doc(db, props.user.displayName, id));
                 navigate("/");
             }
