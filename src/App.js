@@ -22,12 +22,12 @@ function App() {
 
   useEffect(() => {
     FirebaseAuth();
-  });
+  },[]);
 
   if (!isLoading) {
     return (
       <div className="App">
-        <Header version="1.0.0" />
+        <Header version="1.0.5" />
         <div className='viewContainer'>
           <Routes>
             <Route path="/" element={<Navigate to="/home" />} />

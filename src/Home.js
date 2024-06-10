@@ -21,7 +21,8 @@ const Home= (props) => {
 
     useEffect(() => {
         getData();
-    });
+        console.log("loopしてる！！");
+    },[]);
 
     if (isLoading) {
         return <p>読み込み中です...</p>
