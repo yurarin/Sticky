@@ -27,7 +27,7 @@ function App() {
   if (!isLoading) {
     return (
       <div className="App">
-        <Header version="1.0.5" />
+        <Header version="1.0.7" />
         <div className='viewContainer'>
           <Routes>
             <Route path="/" element={<Navigate to="/home" />} />
